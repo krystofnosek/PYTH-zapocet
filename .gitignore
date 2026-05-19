@@ -3,13 +3,6 @@
 __pycache__/
 .ipynb_checkpoints/
 /.vscode/
-saved_data/
-AUG_data/
-graphs/
 .mypy_cache/
 .pytest_cache/
-reqs.txt
-requirements.txt
-poetry_deps.txt
-output_data/
-comparison_poetry_vs_windows_env.txt
+probe_data_download/

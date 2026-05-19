@@ -37,7 +37,7 @@ def get_dataset(shotlist, rs, alpha, Te_shift, BPP_alpha, R_BPP, R_LP):
     ds_container = []
     default_t = None
     no_bt_shots = {47020, 47021, 47022}  # Shots with unavailable Bt data
-    data_dir = Path("probe data download")
+    data_dir = Path.cwd().parent / "probe_data_download"
     data_dir.mkdir(parents=True, exist_ok=True)
 
     for shot in shotlist:
