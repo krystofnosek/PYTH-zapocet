@@ -58,7 +58,7 @@ lint: ## check style with flake8 and mypy
 	flake8 --max-line-length=110 $(PROJECT)	
 
 test: ## run pytest
-	pytest --cov=$(PROJECT) --cov-report=term-missing --cov-report=xml -vv -rx -m "not benchmark" tests
+	pytest tests
 
 benchmark:  ## benchmark the code
 	pytest -vv -rx -m "benchmark" fluid_code

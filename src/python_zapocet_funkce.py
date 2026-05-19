@@ -280,7 +280,7 @@ def fit_profile_gauss_regression(ds, ds_std, C_min, C_max, RBF_min, RBF_max, noi
         samples, dims=["r", "realization"], coords={"r": x_high_res, "realization": range(n_samples)}
     )
 
-    return da, da_std, realizations, gp.kernel_
+    return da, da_std, realizations
 
 
 def compute_phi_Er_vpol_omega_s_fit(
@@ -294,7 +294,7 @@ def compute_phi_Er_vpol_omega_s_fit(
 
     for index in range(to_cycle):
         # Gaussian regression
-        da_phi, da_phi_std, realizations_phi, kernel_info = fit_profile_gauss_regression(
+        da_phi, da_phi_std, realizations_phi = fit_profile_gauss_regression(
             ds_mean["phi"].isel(t_bins=index),
             ds_std["phi"].isel(t_bins=index),
             C_min_phi,
@@ -452,7 +452,7 @@ def plot_phi_discrete_and_fit(
 
         current_color = colors[index]  # Assign unique color for each time bin
 
-        da, da_std, realizations, kernel_info = fit_profile_gauss_regression(
+        da, da_std, realizations = fit_profile_gauss_regression(
             ds_mean["phi"].isel(t_bins=index),
             ds_std["phi"].isel(t_bins=index),
             C_min_phi,
