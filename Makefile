@@ -1,6 +1,6 @@
 .PHONY: clean clean-test clean-pyc clean-build help format lint test coverage validate
 .DEFAULT_GOAL := help
-PROJECT := src
+PROJECT := src tests
 
 define BROWSER_PYSCRIPT ## python script that opens file in a browser
 import os, webbrowser, sys
