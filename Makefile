@@ -51,7 +51,7 @@ clean-test: ## remove test and coverage artifacts
 format:  ## format code using autoflake, black and isort
 	autoflake --remove-all-unused-imports --recursive --remove-unused-variables --in-place $(PROJECT) --exclude=__init__.py	
 	black --line-length 110 $(PROJECT)	
-	isort --line-length 110 $(PROJECT)
+	isort --profile black --line-length 110 $(PROJECT)
 
 lint: ## check style with flake8 and mypy
 	mypy --install-types --non-interactive --ignore-missing-imports $(PROJECT)

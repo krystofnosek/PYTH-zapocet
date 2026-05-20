@@ -1,7 +1,11 @@
 import numpy as np
 
-from src.python_zapocet_funkce import (fit_profile_gauss_regression, get_dataset, get_plasma_times,
-                                       process_dataset)
+from src.python_zapocet_funkce import (
+    fit_profile_gauss_regression,
+    get_dataset,
+    get_plasma_times,
+    process_dataset,
+)
 
 shotlist = [
     51820,
